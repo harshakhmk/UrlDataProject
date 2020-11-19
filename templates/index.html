@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome To Landing Page</h1>
+
+    {% if user.is_authenticated  %}
+    <h3>Hello  {{user.username}}</h3>
+    <br>
+    <h3>Click the below link to input an url</h3>
+    <h2>Click <a href="form/">Here</a> to view the form</h2>
+    
+    <br>
+   <br>
+    <p>Click Here to Log Out</p>
+    
+    <h3><a href="user/Signout">Log out</a></h3>
+    {%  else  %}
+    
+    {% for message in messages   %}
+       <h3>{{message}}</h3>
+        {% endfor  %}   
+
+  <p>Click Here to Create an Account</p>
+  <br> <h3><a href="user/SignUp">Create Account</a></h3> 
+
+  <p>Click Here to Login </p><br>
+<br>    <h3><a href="user/Signin">Log In</a></h3>
+    {% endif  %}
+</body>
+</html>
