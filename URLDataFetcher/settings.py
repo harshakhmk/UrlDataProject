@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
-import django_heroku
+#import django_heroku
 from pathlib import Path
 import locale
 import decouple
@@ -123,13 +123,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_URL = '/static/'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL='/images/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
+
 
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
-django_heroku.settings(locals(), logging=False)
+MEDIA_ROOT=os.path.join(BASE_DIR,'static/images')
+#django_heroku.settings(locals(), logging=False)
