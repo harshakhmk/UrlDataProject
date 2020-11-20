@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
 </head>
 <body>
-    <h1>Welcome To Landing Page</h1>
+    <h1>Welcome To Home Page</h1>
 
     {% if user.is_authenticated  %}
     <h3>Hello  {{user.username}}</h3>
@@ -27,9 +27,11 @@
 
   <p>Click Here to Create an Account</p>
   <br> <h3><a href="user/SignUp">Create Account</a></h3> 
-
-  <p>Click Here to Login </p><br>
-<br>    <h3><a href="user/Signin">Log In</a></h3>
+<br>
+    
+    
+  <p>Click Here to Login </p>
+    <h3><a href="user/Signin">Log In</a></h3>
     {% endif  %}
 </body>
 </html>
