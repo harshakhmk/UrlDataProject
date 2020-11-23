@@ -1,6 +1,6 @@
 # UrlDataProject
 
--Implemented a Web based UrlDataFetcher application with proper authentication and authorization in Django,HTML,CSS
+-Implemented a Web-based UrlDataFetcher application which takes the input URL from the user and displays the data in a text box with proper authentication and authorization in Django, HTML, CSS
 -which is deployed on heroku server 
 
 
